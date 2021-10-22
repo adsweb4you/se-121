@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap');
+
+
+@import url("//cdn.web-fonts.ge/fonts/bpg-glaho-bold/css/bpg-glaho-bold.min.css");
+
+@font-face {
+    font-family: BPG ;
+    src: url('../fonts/bpg_nino_mtavruli_bold.ttf');
+}
+
+h1 {
+    color:#ff0000; /* ტექსტის ფერი */
+    font-size:25px;/* ფონტის ზომა  */
+    font-family: BPG;/* ფონტის მინიჭება  */
+    text-align: left; /* ტექსტის განლაგება (left, center, right)   */
+   /* text-decoration: underline overline line-through; ტექსტის  ხაზები (შუა, ზედა ,ქვედა )  */
+    text-shadow: 4px 6px 20px #ccc ;
+}
+
+h2{
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase; /* დიდი და პატარა ასო  */
+}
+
+.rem{
+    color: chocolate;
+    text-decoration: line-through;
+}
+
+.myfont{
+    color: green ;
+}
+
+#testcolor{
+    color: rgb(235, 22, 206);
+}
+
+span{
+    font-family: "BPG Glaho Bold", sans-serif;
+    text-align: center;
+}
+
+p{
+    line-height: 1.2; /* ტექსტის დაშორება ხაზებს შორის  ვერტიკალური*/
+    letter-spacing: 0px;/*   დაშორება  სიმბოლოებს  შორის  ჰორიზონტალური*/
+}
+
+.box{
+    width: 500px;
+}
+
+.oneline{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
