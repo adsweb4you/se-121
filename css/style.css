@@ -8,8 +8,12 @@
     src: url('../fonts/bpg_nino_mtavruli_bold.ttf');
 }
 
+*{
+    box-sizing: border-box;
+}
+
 h1 {
-    color:#ff0000; /* ტექსტის ფერი */
+   /* color:#ebebeb;  ტექსტის ფერი */
     font-size:25px;/* ფონტის ზომა  */
     font-family: BPG;/* ფონტის მინიჭება  */
     text-align: left; /* ტექსტის განლაგება (left, center, right)   */
@@ -53,4 +57,75 @@ p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: bold; /*   გასქელებული ტექსტი*/
+}
+
+.mineheader{
+    height: 550px;
+    /* background: linear-gradient(0deg, rgba(12,13,23,1) 15%, rgba(5,9,18,1) 71%); */
+    background-color: rgb(27, 27, 31); 
+    background-image: url('../img/a17_m_2444.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:50% 50%;
+    background-attachment: fixed;
+}
+
+.mineheader h1{
+    width: 450px;
+    margin-left: 50px;
+    background-color: deeppink;
+    color: #fff;
+}
+
+.red{
+    /* margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px; */
+    margin: 50px 40px 30px 15px ;
+    padding: 50px;
+    height: 450px;
+    background-color: red;
+    border:5px solid green;
+    border-radius: 70px 80px 150px 500px;
+    box-shadow: 7px 7px 15px #ccc;
+}
+
+h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.product{
+    padding: 50px;
+    background-color: rgb(225, 240, 255);
+}
+
+.card{
+    width: 280px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px #c8c8c840;
+    margin: 0 auto;
+
+}
+
+.card img{
+  width: 100%;
+  border-radius: 5px 5px 0 0 ;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+.card a{
+    background-color: mediumslateblue;
+    text-decoration: 0;
+    padding: 6px 17px;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'BPG Glaho Bold';
+    font-size: 11px;
+    box-shadow: 2px 5px 9px #7b68ee;
 }
