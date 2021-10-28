@@ -1,15 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>three</title>
+    <style>
+        body {
+    font-family: 'Work Sans', sans-serif;
+    background: #242424;
 
-    <h1>კონტაქტი</h1>
-    <img src="img/a17_m_2444.jpg" alt="">
-    
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.container {
+    width: 100%;
+    height: 500px;
+    max-width: 2100px;
+    padding: 0 15px;
+    margin: 0 auto;
+    background-image: url('/img/a17_m_2444.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.firstext {
+    font-style: normal;
+    color: #F6F6F7;
+    font-size: 30px;
+    line-height: 2;
+    text-decoration: none;
+    padding: 50px 200px 0;
+}
+
+.anothertext {
+    font-style: normal;
+    color: #ffffff;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 0px 198px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.dropdown {
+    width: 60px;
+    margin: 138px 0px 0px 980px;
+}
+
+.button1 {
+    background-color: #989CA2;
+    text-decoration: 0;
+    padding: 14px 17px;
+    color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 0px 0px;
+    margin-right: 10px;
+}
+
+.button2 {
+    background-color: #4A88BE;
+    text-decoration: 0;
+    padding: 14px 17px;
+    color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 0px 0px;
+}
+
+.buttons {
+    padding: 35px 200px 0;
+
+}
+
+/* HEADER_navbar */
+.navbarlist {
+    list-style: none;
+    display: flex;
+}
+
+.navbarlink {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: 0;
+}
+
+.navbar {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 50px;
+}
+
+.navbartext {
+    margin: 0 12px;
+}
+
+/* HEADER  end*/
+
+/* Product */
+
+.product {
+    padding: 50px;
+
+}
+
+.product h1 {
+    margin-bottom: 30px;
+}
+
+
+.card1 {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px #c8c8c840;
+    margin-top: 100px;
+    margin-left: 170px;
+
+}
+
+.card2 {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px #c8c8c840;
+    margin-top: -378px;
+    margin-left: 600px;
+    margin-bottom: 500px;
+}
+
+.card3 {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 16px #c8c8c840;
+    margin-top: -378px;
+    margin-left: 610px;
+    margin-bottom: 500px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 5px;
+}
+
+.cardbody {
+    padding: 20px;
+}
+
+.fasi {
+    font-style: bold;
+    color: green;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+
+.buynowbutton {
+    background-color: #4A88BE;
+    text-decoration: 0;
+    padding: 14px 17px;
+    color: #ffffff;
+    border-radius: 7px;
+    margin: 0px 0px 0px 1px;
+    box-shadow: 1px 1px 0px 0px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <nav class="navbar">
+                <ul class="navbarlist">
+                    <li class="navbartext">
+                        <a class="navbarlink" href="#">FEATURES</a>
+                    </li>
+                    <li class="navbartext">
+                        <a class="navbarlink" href="#">PRICING</a>
+                    </li>
+                    <li class="navbartext">
+                        <a class="navbarlink" href="#">SIGN IN</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 class="firstext">Simple, powerful, event, software -- just add people.</h1>
+            <p class="anothertext">Over $150M worth of tickets sold online by thousands of organisers around the world.
+            </p>
+            <div class="buttons">
+                <a class="button1" href="#"><B>Learn more</B></a>
+                <a class="button2" href="#">Get started</a>
+            </div>
+            <img class="dropdown" src="img/a17_m_2444.jpg">
+        </div>
+    </header>
+    <div class="product">
+        <div class="card1">
+            <div class="cardbody">
+                <img
+                    src="https://www.sunglasses-shop.co.uk/FileRepository/Images/SunglassesPhotos/enlarge/Ray-Ban-2020/RB3025-00131-8053672877311.jpg">
+                <h1>Ray-Ban Aviator</h1>
+                <p>Large Metal RB3025 Gold 00131 58mm</p>
+                <p class="fasi">124$ <sub><del>154$</del></sub></p>
+                <a class="buynowbutton" href="#">BUY NOW</a>
+            </div>
+            </div>
+
+            <div class="card1">
+                <div class="cardbody">
+                    <img
+                        src="https://www.sunglasses-shop.co.uk/FileRepository/Images/SunglassesPhotos/enlarge/Alexander-McQueen-2019/AM0192S-003889652215433.jpg">
+                    <h1>Alexander McQueen</h1>
+                    <p>AM0192S Havana 003 54mm</p>
+                    <p class="fasi">209$ <sub><del>290$</del></sub></p>
+                    <a class="buynowbutton" href="">BUY NOW</a>
+                </div>
+                </div>
+
+                <div class="card1">
+                    <div class="cardbody">
+                        <img
+                            src="https://www.sunglasses-shop.co.uk/FileRepository/Images/SunglassesPhotos/enlarge/Emporio-Armani-2019/EA4088-556011-8053672642209.jpg">
+                        <h1>Emporio Armani</h1>
+                        <p>EA4088 Violet 556011 52mm</p>
+                        <p class="fasi">40$ <sub><del>100$</del></sub></p>
+                        <a class="buynowbutton" href="">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
 </body>
+
 </html>

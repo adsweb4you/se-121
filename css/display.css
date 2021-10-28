@@ -1,0 +1,112 @@
+@font-face {
+    font-family: BPG ;
+    src: url('../fonts/bpg_nino_mtavruli_bold.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.col{
+    width: 25%;
+    padding: 0 15px;
+ 
+}
+
+.col-75{
+    width: 75%;
+    padding: 0 15px;
+}
+
+.card{
+    box-shadow: 4px 4px 22px #ccccccb8;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.card img{
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cardboy{
+    padding: 15px;
+}
+
+.content{
+    width: 1100px;
+    margin: auto;
+    max-width: 100%;
+   
+}
+
+h1{
+    margin-block-start: 0;
+    margin-block-end:0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.minetext{
+    color: #fff;
+    background-color: #000;
+    padding: 25px;
+    width: 55%;
+    height: fit-content;
+    border-radius: 7px;
+}
+
+.home{
+    background-image: url('../img/a17_m_2444.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.box{
+    display: flex;
+    justify-content: flex-start; /* ჰორიზონტალური განლაგების მართვა */
+    align-items: center; /* ვერტიკალური განლაგების მართვა */
+}
+
+nav {
+    padding: 7px;
+}
+
+.navflex{
+    display: flex;
+}
+
+.navbar{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-left: auto;
+
+}
+
+.navbar li{
+ margin-top: 20px;
+ display: inline-block;
+ 
+}
+
+
+.navbar li a{
+   color: lightslategrey;
+   text-decoration: 0;
+   margin: 0 7px;
+   font-family: BPG ;
+   }
