@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #0a19301f;
+}
+
+body::after{
+    content: "";
+    background-image: url('https://cdn.picpng.com/seamless/small/seamless-repeating-pattern-50590.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+     pointer-events: none;
+     opacity: 0.2;
+
+}
+
+.box{
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 3px 3px 7px #ccc;
+    background-color: #fff;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colum1{
+    background-image: url('../img/a17_m_2444.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+}
+
+.myform{
+    width: 60%;
+    padding: 40px;
+}
+
+.caption{
+    width: 70%;
+}
+
+
+.form-group{
+    position: relative;
+    margin-top: 30px;
+}
+
+.form-group label{
+    position: absolute;
+    font-size: 15px;
+    color: #0e0808;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form-group input{
+    display: block;
+    width: 100%;
+    padding:12px 7px;
+    border: 0;
+    outline: 0;
+    border-bottom:   1px solid #cacaca ;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    background-color: cornflowerblue;
+    color: #fff;
+    border-radius: 50px;
+    padding: 20px 40px;
+    border: 0;
+    margin-top: 30px;
+}
+
+.btn  + a{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    text-decoration: 0;
+    margin-top: 25px;
+}
+
+/* როდესაც ეკრანის ზომა ჩამოცდება 800px */
+/* @media (max-width:800px){
+
+    .colum1{
+        width: 100%;
+        height: 500px;
+    }
+
+    .myform{
+        width: 100%;
+    }
+    
+} */
+
+/* როდესაც ეკრანის ზომა გაცდება 1600px */
+/* @media (min-width:1600px){
+
+ body{
+     background-color: red;
+ }
+    
+} */
+
+@media only screen and (min-width:400px) and (max-width:800px){
+
+
+    
+  strong{
+      color: red;
+  }
+
+}
