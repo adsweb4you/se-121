@@ -25,11 +25,41 @@ body::after{
 
 }
 
-.box{
+.box:hover{
     width: 600px;
     max-width: 100%;
     box-shadow: 3px 3px 7px #ccc;
     background-color: #fff;
+    /* transform: rotate(0deg); */
+     
+    /* transform: scale(5); */
+ 
+    animation-name: zoom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes zoom {
+    0%{
+        transform:translate(-50% , -50%);  
+    }
+
+    50%{
+        transform: translate(-70% , -70%);  
+    }
+
+    100%{
+        transform: translate(-10% , -10%);    
+    }
+}
+
+
+.box:hover{
+    transform: rotate(15deg);
 }
 
 .flex{
@@ -38,11 +68,12 @@ body::after{
 }
 
 .colum1{
-    background-image: url('../img/a17_m_2444.jpg');
+    background-image: url('https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 40%;
+ 
 }
 
 .myform{
@@ -127,4 +158,26 @@ body::after{
       color: red;
   }
 
+}
+
+ 
+
+.animheart{
+    display: block;
+    margin: auto;
+    color: red;
+    animation-name: heart;
+    animation-iteration-count: infinite;
+    animation-duration: .2s;
+    animation-direction: alternate;
+}
+
+@keyframes heart {
+    0%{
+     transform: scale(1);
+    }
+
+    100%{
+       transform: scale(1.5); 
+    }
 }

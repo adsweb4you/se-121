@@ -1,148 +1,132 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="UTF-8">
-  <title>დავალება</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
- <style>
-     *{
-    box-sizing: border-box;
-}
-.body{
-    margin: 0px;
-    height: 1800px;
-}
-.cardbox{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cards {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-family:'Courier New', Courier, monospace;
+    display: fixed;
 }
 
-.card{
-    width: 600px;
-    height: 600px;
-    display: flex;
+.card {
+    box-shadow:  0 0 3px black;
 }
-.foto{
-    position: relative;
-    height: 100%;
-    width: 50%;
-    float: left;
-}
-.foto img{
-    border-radius: 25px 0px px 25px;
+
+.card__image {
     width: 100%;
-    height: 100%;
-}
-.name{
-    bottom: 0;
-    position: absolute;
-    padding: 30px;
-    font-size: 30px;
-    margin-bottom: 100px;
-    right: 0;
-}
-.card2{
-    background-color: cyan;
-    width: 50%;
-    height: 100%;
-    border-radius: 0px;
-    color: darkblue;
+    display: block;
 }
 
-.line{
-    padding: 100px 0px 0px 30px;
-    width: 100%;
-}
-.line h1{
-    padding: 10px;
-}
-.line p{
-    padding: 10px;
-}
-
-.form{
-    margin: auto;
-    width: fit-content;
-    position: relative;
-
-}
-.form2{
-    margin: auto;
-    width: fit-content;
-    position: relative; 
-}
-.form input{
-    border: 1px solid rgb(93, 90, 97);
+.card__content {
+    line-height: 1.5;
+    font-size: 0.9;
     padding: 15px;
-    border-radius: 0px;
-}
-.form label{
-    position: absolute;
-    left: 0px;
-    top: 15px;
-    pointer-events: none;
+    background: wheat;
 }
 
-.form input:focus + label{
-    top: -15px;
-    transition: all 3s;
+.card__content > p:first-of-type {
+    margin-top: 0;
 }
-.form2 input:focus + label{
-    top: -15px;
-    transition: all 3s;
+
+.card__content > p:last-of-type {
+    margin-bottom: 0;
 }
-.log{
-    width: 100px;
-    border-radius: 15px;
-    text-align: center;
-    margin-left: 70px;
+
+.card__info {
     padding: 15px;
-    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    background: wheat;
+    font-size: 0.8em;
+    border-bottom: 2px solid wheat;
 }
-.log a{
-    text-decoration: none;
-    color: red;
-}
-.back a{
-    margin-left: 40px;
-}
- </style>
+
+    </style>
 </head>
 <body>
-  
-  <section class="cardbox">
-    <div class="card">
-     <div class="foto">
-         <div class="name">
-          Salome Pakeliani
-         </div>
-        <img src="img/a17_m_2444.jpg" alt="">
-   </div>
 
-   <div class="card2">
-     <div class="line">
-         <h1>We are NUVA</h1>
-         <p>Welcome back! Log in to Your account to view doday's clients:</p>
-     </div>
-     <div class="form">
-         <input type="text" value="">
-         <label for="">Email:</label>
-     <div class="form2">
-         <input type="text" value="">
-         <label for="">Password:</label>
-     </div>
-     <div class="log">
-         <a href="#">Log in</a>
-     </div>
-     <div class="back">
-         <a href="#">Forget your password?</a>
-     </div>
-   </div>
-   </div>
-   </div>
-</section>
+    <div class="cards">
+        <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+                <div class="card">
+            <img src="https://a-z-animals.com/media/animals/images/original/camel2-400x300.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p> lotem impsum dolor sit amet consectetur</p>
+                <p> Alias itaque praesentium eum</p>
+            </div>
+            <div class="card__info">
+                <div>
+                    <a href="./" class="card__link">View only the best articles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
