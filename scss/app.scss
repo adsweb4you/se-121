@@ -1,0 +1,98 @@
+@use "button.scss";
+
+$minecolor:rgb(38, 38, 248);
+
+body{
+    background-color: $minecolor;
+    background: {
+        image:url('../img/a17_m_2444.jpg');
+        size:cover;
+        repeat:no-repeat;
+        position: center;
+    };
+}
+
+nav{
+   background-color:$minecolor ; 
+}
+
+.card{
+    width: 370px;
+    margin: auto;
+    border-radius:15px;
+    max-width: 100%;
+    transition: all .6s;
+    background-color: #fff;
+
+    img{
+        max-width: 100%;
+    }
+
+    &:hover{
+        box-shadow: 2px 2px 8px #000;
+    }
+
+    &::before{
+        content: "";
+    }
+
+}
+
+%btn{
+    border: 1px solid red;
+    padding: 12px;
+    color: red;
+    outline: 0;
+}
+
+button{
+    @extend %btn;
+    padding:button.$btnlg;
+    @include button.minebtn();
+    background-color: transparent;
+}
+
+
+@mixin formcontrol($redius:20px, $color, $width:true) {
+    outline: 0;
+    border: 1px solid $color;
+    padding: 7px;
+    color: $color;
+
+    @if $width {
+        width: 250px;
+    }
+    
+    @if $redius == 20px{
+        text-transform: uppercase;
+    }@else if $redius == 30px{
+        text-transform: capitalize;  
+    }
+    
+    @else{
+      text-transform: lowercase;  
+    }
+
+    border-radius: $redius;
+}
+
+.in1{
+    @include formcontrol(20px, red, true);
+    
+}
+
+.in2{
+    @include formcontrol(50px, rgb(27, 255, 6), false);
+    
+}
+
+.in3{
+    @include formcontrol(30px, rgb(27, 255, 6), true);
+    
+}
+$base-color: #036;
+@for $i from 1 through 5 {
+    #ul#{$i} {
+      background-image: url('../img/icon/#{$i}.svg');
+    }
+  }

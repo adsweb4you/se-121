@@ -1,0 +1,93 @@
+body {
+  background-color: #2626f8;
+  background-image: url("../img/a17_m_2444.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  background-color: #2626f8;
+}
+
+.card {
+  width: 370px;
+  margin: auto;
+  border-radius: 15px;
+  max-width: 100%;
+  transition: all 0.6s;
+  background-color: #fff;
+}
+.card img {
+  max-width: 100%;
+}
+.card:hover {
+  box-shadow: 2px 2px 8px #000;
+}
+.card::before {
+  content: "";
+}
+
+button {
+  border: 1px solid red;
+  padding: 12px;
+  color: red;
+  outline: 0;
+}
+
+button {
+  padding: 25px;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.in1 {
+  outline: 0;
+  border: 1px solid red;
+  padding: 7px;
+  color: red;
+  width: 250px;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+
+.in2 {
+  outline: 0;
+  border: 1px solid #1bff06;
+  padding: 7px;
+  color: #1bff06;
+  text-transform: lowercase;
+  border-radius: 50px;
+}
+
+.in3 {
+  outline: 0;
+  border: 1px solid #1bff06;
+  padding: 7px;
+  color: #1bff06;
+  width: 250px;
+  text-transform: capitalize;
+  border-radius: 30px;
+}
+
+#ul1 {
+  background-image: url("../img/icon/1.svg");
+}
+
+#ul2 {
+  background-image: url("../img/icon/2.svg");
+}
+
+#ul3 {
+  background-image: url("../img/icon/3.svg");
+}
+
+#ul4 {
+  background-image: url("../img/icon/4.svg");
+}
+
+#ul5 {
+  background-image: url("../img/icon/5.svg");
+}
+
+/*# sourceMappingURL=app.css.map */
