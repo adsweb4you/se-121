@@ -4,359 +4,503 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
      <style>
-         * 
-{
+         * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
-body
-
-{
-margin:0;
+.container {
+    width: 1140px;
+    margin: auto;
+    max-width: 100%;
 }
 
-.header
-{
-    background-image: url("https://juyonnatravelsandtours.com/wp-content/uploads/2020/08/mykonos-5.jpg");
+/******************* HEADER *********************/
+.headerdarken{
+    width: 100%;
+    height: 9%;
+    position: absolute;
+    background: rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+header {
+    background-image: url(https://i.ibb.co/F8FZFPb/image-1.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    filter:grayscale(0.5);
-    filter:opacity(0.9);
-    color: white;
-    height:550px;
+    height: 100vh;
+    background-attachment: fixed;
+    padding: 20px 0;
 }
 
-.header::before{
-    content: "";
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 0;
+}
+
+
+.wertilebi{
+    line-height: 0;
+    color: #E1C17B;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu_list {
+    list-style: none;
+    display: flex;
+}
+
+.menu_list_link {
+    position: relative;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu_list_link::after{
+    content: '';
     position: absolute;
     left: 0;
-    top: 0;
-    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    width: 0%;
+    background: #E1C17B;
+
+    transition: all .3s;
+}
+
+.menu_list_link:hover::after{
     width: 100%;
-    height: 100%;
-    backdrop-filter: brightness(0.5);
-}
-.content
-{
-    width:1200px;
-    max-width: 100%;
-    margin:auto;
-    height: 550px;
 }
 
-.text
-{
-    width:70%;
-    
-  
-   
+.downicon{
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 3px;
+    transition: all .3s;
 }
 
-.inline 
-{   margin-top:30px;
-    display:flex;
-    flex-wrap: wrap;
-    text-align: center;
+.dropdown_menu{
+    position: absolute;
+    top: 120%;
+    list-style: none;
+    background: #E1C17B;
+    padding: 6px 21px;
+    border-radius: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
 }
 
-.column
-{  
-    width:33.3%;
-    padding:20px;
+.menu_list_item:hover .dropdown_menu{
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
 }
-.littlebox
-{
-    
-    
-    position:relative;
-    height:40px;
-    background-color: white;
+
+.menu_list_item:hover .downicon{
+    transform: rotate(180deg);
+}
+
+.dropdown_menu_item{
+    margin: 10px 0;
+}
+
+.dropdown_menu_link{
+    position: relative;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown_menu_link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 0%;
+    background: #ffffff;
+
+    transition: all .3s;
+}
+
+.dropdown_menu_link:hover::after{
+    width: 100%;
+}
+
+.menu_list_item{
+    margin:  0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.calendaricon{
+    background-color: rgba(0,0,0,0.3);
     border-radius: 10px;
-    color: gray;
-}
-
-.icon
-{
-    position:absolute;
-    padding:10px;
-    left:-20px;
-    background-color: orange;
-    color:white;
-    height:40px;
-    width:40px;
-}
-
-.navbar
-{
-    display:flex;
-    justify-content:space-between;
-    height:50px;
-}
-
-.navbar img
-{width:80px;
-height:100%;
-}
-
-.list li
-{
-    display:inline-block;
-    padding-left: 30px;
-    padding-bottom:10px;
-}
-
-.navigationcolor
-{
-    background-color: rgb(72, 93, 121);
-    height: 50px;
-    color:white;
-}
-
-.title 
-{
-  
-    width:100%;
-   
-    font-weight:bold;
-    font-size: 41px;
-}
-
-p
-{
-    padding: 30px 0;
-    
-}
-
-.button
-{
-    background-color: rgb(226, 173, 75);
-    border-radius:5px;
-    color:white;
     padding: 5px;
-    
 }
 
-.offers
-{
-    padding-top: 10px;
+.header_button{
+    margin-top: 5px;
 }
+.header_button_link{
+    padding: 13px 18px;
 
-.display
-{
-    display:flex;
-    flex-wrap: wrap;
-    padding-top:100px;
-    height:100%;
-}
-
-.column2
-{
-    width:30%;
-    
-   
-    
-
-}
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1px;
+    color: #ffffff;
+    text-decoration: none;
 
 
+    background: #E1C17B;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    border: 1px solid #E1C17B;
 
-.title2
-{
-    width:100%;
-    background-color: rgb(218, 213, 213);
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    padding:8px;
-    color:grey;
-}
+    align-items: center;
 
-.input
-{
-    width:90%;
-    margin:auto;
-    margin-bottom: 30px;
-    border:0;
-   border: 1px solid gray;
-    outline:0;
-
-}
-
-.button2
-{
-    width:100%;
-    background-color:rgb(219, 164, 61);
-    color:white;
-    padding:10px;
-    border:0;
+    transition: all .3s;
 }
 
 
-.form
-{
-    background-color: white;
-    width:80%;
-    margin:auto;
+.header_button_link:hover{
+    color: #E1C17B;
+    background: transparent;
+}
+.textbox{
+    margin-top: 12%;
 }
 
-.form label 
-{
-    color:gray;
-    padding-left: 7px;
+.textbox .maglatext{
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 39px;
 }
 
-.plaintext
-{
-    text-align:center;
-    color:gray;
-    margin-top:50px;
+.stars{
+    display: flex;
+    color: white;
+    font-size: 20px;
+    line-height: 80px;
 }
 
-@media only screen and (max-width:800px) {
-   .column
-   { width:70%;}
-    .navbar
-    {
-        display:none;
-    }
-    .display
-    {
-       
-        padding-top: 0;
-    }
-
-    header 
-    {
-        height:3000px;
-    }
-    .form {
-        width:100%;
-        margin:0;
-    }
-
-    .text
-    {
-        width:100%;
-    }
-
-    .column2
-    {
-        width:100%;
-    }
-
-    .plaintext
-     {
-    display:none;
-    }
-
-    .basket
-    {
-        display:none;
-    }
+.stars i{
+   margin-right: 3px;
 }
 
-.basket
-{
-    position:absolute;
-    padding:5px;
-    border-radius: 50%;
-    background-color:red;
-    bottom:5px;
-    animation-name: basket;
-animation-iteration-count: infinite;
-animation-duration: .5s;
-animation-direction: alternate;
+
+.featureline{
+    display: flex;
+    color: white;
+    font-weight: 300;
+    line-height: 50px;
+}
+
+.featureicons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.featureiconsbox{
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.featureiconsboxtext{
+    padding: 10px;
+}
+.featureiconsboxtext h1{
+    font-size: 15px;
+    color: #6F6F6F;
+}
+
+.featureiconsboxtext p{
+    font-size: 8px;
+    color: #6F6F6F;
+}
+
+.featureiconsboxicon{
+    background: #E1C17B;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
 
 }
 
-@keyframes basket {
-    0%{
-     transform: scale(1);
-     opacity: 1;
-    }
-    50% {
-        
-            transform: scale(1.5);
-            opacity: 0.5;
-       
-    }
+.gverdigverd{
+    display: flex;
+    justify-content: space-between;
+}
 
-    100%{
-       transform: scale(2); 
-       opacity: 0.3;
-    }
-    }
+.inputbox{
+    margin-top: 12%;
+    width: 25%;
+    background: #FEFEFE;
+    border-radius: 3px;
+    height: 300px;
+}
 
+.inputdarken{
+    width: 100%;
+    height: 12%;
+    background: #efefef;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+}
+
+.inputdarken p{
+    color:#6F6F6F;
+    font-weight: 700;
+}
+
+.inputmain label{
+    font-weight: 600;
+	font-size: 14px;
+	color: #666;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.inputmain{
+    padding: 20px 0px 0px 15px;
+}
+
+.inputmain input{
+    width: 95%;
+    padding: 13px 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 1px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom:10px;
+    /* for default input */
+    -moz-appearance: unset;
+    -webkit-appearance: unset;
+    -o-appearance: unset;
+    -ms-appearance: unset;
+    outline: none;
+    -moz-outline: none;
+    -webkit-outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+}
+
+::placeholder {
+    color: rgba(0,0,0,0.2);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: rgba(0,0,0,0.2);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgba(0,0,0,0.2);
+  }
+
+.btn{
+    margin-top: 15px;
+    outline: none;
+    border: none;
+    font: 16px;
+    background: #E1C17B;
+    color: #ffffff;
+    padding: 14px 40px;
+    width: 95%;
+    cursor: pointer;
+}
 
      </style>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <title>Web</title>
 </head>
 <body>
-    <navbar>
-    <div class="navigationcolor">
-    <div class="content">
-    <div class="navbar">
-        <img src="https://thumbs.dreamstime.com/z/modern-black-line-art-mountain-hotel-logo-design-template-modern-black-line-art-mountain-hotel-logo-design-164322233.jpg">
-        <ul class="list">
-            <li>home <i class="bi bi-caret-down"></i></li>
-            <li>Rooms <i class="bi bi-caret-down"></i></li>
-            <li>Pages <i class="bi bi-caret-down"></i></li>
-            <li>Blog</li>
-            <li>Contact Us</li>
-            <li><button class="button"><i class="bi bi-calendar-week"></i>Book Online</button></li>
-            
-        </ul>
-        </div>
-    </div>
-</div>
-</navbar>
-   <header class="header">
-       <div class="content">
-           <div class="basket"><i class="bi bi-cart-check-fill"></i></div>
-           
-            <div class="display">
-           <div class="text">
-        <div class="title">WELCOME TO ZANTE, MODERN ROOMS</div>
-        <p><i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> Star Luxury Hotel</p>
-        <div class="offers"><i class="bi bi-check2-square"></i>Modern Rooms and Spacious Suites</div>
-        <div class="offers"><i class="bi bi-check2-square"></i>A Gourmet Dining Experience </div>
-        <div class="offers"><i class="bi bi-check2-square"></i>A Family Room from 89 EUR</div>
-        <div class="inline">
-       <div class="column">
-        <div class="littlebox"><i class=" icon bi bi-wifi"></i> <div>Enjoy Free Wifi</div>
-        <div>In the Entire Hotel </div></div></div>
-        <div class="column"><div class="littlebox"><i class=" icon bi bi-tv"></i><div>Cable Television</div>
-            <div>Free Cable TV</div></div></div>
-            <div class="column"> <div class="littlebox"><i class=" icon bi bi-cup"></i><div>Restaurant</div>
-                <div>Restaurant and Bar</div></div></div>
+    <div class="headerdarken"></div>
+    <header>
+    <div class="container">
+        <div class="header_inner">
+            <div class="logo">
+                <a href="#">Hotel Zante</a>
+                <p class="wertilebi">.....</p>
             </div>
-    </div>
-     
-     <div class="column2">
-    <div class="form">
-        <div class="title2">
-            Book Your Stay
+
+        <nav class="menu">
+            <ul class="menu_list">
+                <li class="menu_list_item">
+                    <a href="" class="menu_list_link">HOME</a><i class="bi downicon bi-chevron-down"></i>
+                    <ul class="dropdown_menu">
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT1</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT2</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT3</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="menu_list_item">
+                    <a href="" class="menu_list_link">ROOMS</a><i class="bi downicon bi-chevron-down"></i>
+                    <ul class="dropdown_menu">
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">LARGERTEXT1111</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT2</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT3</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="menu_list_item">
+                    <a href="" class="menu_list_link">PAGES</a><i class="bi downicon bi-chevron-down"></i>
+                    <ul class="dropdown_menu">
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">LARGERTEXT11111111111111111</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT2</a>
+                        </li>
+                        <li class="dropdown_menu_item">
+                            <a class="dropdown_menu_link" href="">TEXT3</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li class="menu_list_item">
+                    <a href="" class="menu_list_link">BLOG</a>
+                </li>
+                <li class="menu_list_item">
+                    <a href="" class="menu_list_link">CONTACT US</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header_button">
+            <a class="header_button_link" href="" ><i class="bi calendaricon bi-calendar-check"></i>&nbsp;&nbsp;&nbsp;BOOK ONLINE</a>
         </div>
-        <form action="" method="">
-            <div > <label for="">Check in/out</label> </div>
-           <div class="input ">  <input type="text" placeholder="Check in > Check out" > </div>
-           <div > <label for="">Guests</label> </div>
-           <div class="input ">  <input type="text" placeholder="Guest 1"> </div>
-           <button class="button2">Check Availability</button>
-           </form>
+    </div> 
+
+<div class="gverdigverd">
+    <div class="textbox">
+        <h1 class="maglatext">WELCOME TO ZANTE, MODERN ROOMS</h1>
+        <div class="stars">
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+            <p>Star Luxury Hotel</p>
+        </div>
+        <div class="features">
+            <div class="featureline">
+               <i class="bi bi-check2-square"></i><p>&nbsp;Modern Rooms & Spacious Suites</p> 
+            </div>
+            <div class="featureline">
+                <i class="bi bi-check2-square"></i><p>&nbsp;A Gourment Dining Experience</p> 
+             </div>
+             <div class="featureline">
+                <i class="bi bi-check2-square"></i><p>&nbsp;Family Room from $89 per night</p> 
+             </div>
+        </div>
+        <div class="featureicons">
+            <div class="featureiconsbox">
+                <div class="featureiconsboxicon"><i class="bi bi-wifi-2"></i></div>
+                <div class="featureiconsboxtext">
+                   <h1>ENJOY FREE WIFI</h1>
+                <p>IN THE WHOLE HOTEL</p> 
+                </div>
+            </div>
+            <div class="featureiconsbox">
+                <div class="featureiconsboxicon"><i class="bi bi-tv"></i></div>
+                <div class="featureiconsboxtext">
+                   <h1>CABLE TELEVISION</h1>
+                <p>FREE CABLE TV</p> 
+                </div>
+            </div>
+            <div class="featureiconsbox">
+                <div class="featureiconsboxicon"><i class="bi bi-egg-fried"></i></div>
+                <div class="featureiconsboxtext">
+                   <h1>RESTAURANT</h1>
+                <p>RESTAURANT & BAR</p> 
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <div class="inputbox">
+        <div class="inputdarken">
+            <p>BOOK YOUR STAY</p>
+        </div>
+
+        <div class="inputmain">
+            <div class="inputlabel">
+                <label>Check In/Out:</label>
+                <input type="text" name="" placeholder="Check In ➡ Check Out" required>
+            </div>
+
+            <div class="inputlabel">
+                <label>Guests:</label>
+                <input type="text" name="" placeholder="Guests 1" required>
+            </div>
+
+            <button class="btn" type="button">CHECK AVAILABILITY</button>
+        
+
+            </div>
+        </div>
     </div>
-
-       </div>
-       </div>
-
-
-</header> 
-<div class="plaintext"><h1 >Our Favorite Rooms</h1>
-<div >Check out now our best rooms</div>
 </div>
+    
+
+
+</div>
+    </header>
+    
 </body>
 </html>
