@@ -4,503 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+  .mytex{
+    display: flex;
+    justify-content: space-around;
 }
-
-.container {
-    width: 1140px;
-    margin: auto;
-    max-width: 100%;
+.line{
+    display: flex;
 }
-
-/******************* HEADER *********************/
-.headerdarken{
-    width: 100%;
-    height: 9%;
-    position: absolute;
-    background: rgba(0,0,0,0.2);
-    overflow: hidden;
-}
-
-header {
-    background-image: url(https://i.ibb.co/F8FZFPb/image-1.png);
+header{
+    background-image: url('img/slider.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-attachment: fixed;
-    padding: 20px 0;
 }
-
-.logo a {
+a{
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 0;
+    color: rgb(150, 16, 16);
 }
-
-
-.wertilebi{
-    line-height: 0;
-    color: #E1C17B;
-    font-size: 25px;
-    display: flex;
-    justify-content: flex-end;
+.list-inline-item{
+    margin-right: 1.5rem;
 }
-
-.header_inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.menu{
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-.menu_list {
-    list-style: none;
-    display: flex;
-}
-
-.menu_list_link {
-    position: relative;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu_list_link::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    height: 2px;
-    width: 0%;
-    background: #E1C17B;
-
-    transition: all .3s;
-}
-
-.menu_list_link:hover::after{
-    width: 100%;
-}
-
-.downicon{
-    color: #ffffff;
-    font-size: 12px;
-    margin-left: 3px;
-    transition: all .3s;
-}
-
-.dropdown_menu{
-    position: absolute;
-    top: 120%;
-    list-style: none;
-    background: #E1C17B;
-    padding: 6px 21px;
-    border-radius: 5px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s;
-}
-
-.menu_list_item:hover .dropdown_menu{
-    top: 100%;
-    opacity: 1;
-    visibility: visible;
-}
-
-.menu_list_item:hover .downicon{
-    transform: rotate(180deg);
-}
-
-.dropdown_menu_item{
-    margin: 10px 0;
-}
-
-.dropdown_menu_link{
-    position: relative;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.dropdown_menu_link::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    height: 2px;
-    width: 0%;
-    background: #ffffff;
-
-    transition: all .3s;
-}
-
-.dropdown_menu_link:hover::after{
-    width: 100%;
-}
-
-.menu_list_item{
-    margin:  0 20px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.calendaricon{
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.header_button{
-    margin-top: 5px;
-}
-.header_button_link{
-    padding: 13px 18px;
-
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1px;
-    color: #ffffff;
-    text-decoration: none;
-
-
-    background: #E1C17B;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
-    border-radius: 2px;
-    border: 1px solid #E1C17B;
-
-    align-items: center;
-
-    transition: all .3s;
-}
-
-
-.header_button_link:hover{
-    color: #E1C17B;
-    background: transparent;
-}
-.textbox{
-    margin-top: 12%;
-}
-
-.textbox .maglatext{
-    color: #ffffff;
-    font-weight: 400;
-    letter-spacing: 2px;
-    font-size: 39px;
-}
-
-.stars{
-    display: flex;
+.nav-light{
     color: white;
-    font-size: 20px;
-    line-height: 80px;
 }
-
-.stars i{
-   margin-right: 3px;
-}
-
-
-.featureline{
-    display: flex;
+.navbar-nav{
     color: white;
-    font-weight: 300;
-    line-height: 50px;
 }
-
-.featureicons{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-}
-
-.featureiconsbox{
-    background: white;
-    display: flex;
-    align-items: center;
-    border-radius: 2px;
-}
-
-.featureiconsboxtext{
-    padding: 10px;
-}
-.featureiconsboxtext h1{
-    font-size: 15px;
-    color: #6F6F6F;
-}
-
-.featureiconsboxtext p{
-    font-size: 8px;
-    color: #6F6F6F;
-}
-
-.featureiconsboxicon{
-    background: #E1C17B;
-    padding: 10px;
+.navbar-link{
     color: white;
-    font-size: 25px;
-
 }
-
-.gverdigverd{
-    display: flex;
-    justify-content: space-between;
+.navbar{
+    border-bottom: 2px solid white;
+    padding: 30px 0;
 }
-
-.inputbox{
-    margin-top: 12%;
-    width: 25%;
-    background: #FEFEFE;
-    border-radius: 3px;
-    height: 300px;
+.text{
+    margin-top: 150px;
+    width: 85%;
 }
-
-.inputdarken{
-    width: 100%;
-    height: 12%;
-    background: #efefef;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1px;
+@media (max-width:1400px){
+    .list-inline-itim:not(:last-child){
+        margin-right: 1rem;
+    }
 }
-
-.inputdarken p{
-    color:#6F6F6F;
-    font-weight: 700;
+@media (max-width:1200px){
+    .line{
+        flex-direction: column;
+    }
 }
-
-.inputmain label{
-    font-weight: 600;
-	font-size: 14px;
-	color: #666;
-	display: block;
-	margin-bottom: 5px;
+@media (max-width:1200px){
+    .navbar{
+        flex-direction: column;
+    }
 }
-
-.inputmain{
-    padding: 20px 0px 0px 15px;
-}
-
-.inputmain input{
-    width: 95%;
-    padding: 13px 10px;
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 1px;
-    font-size: 14px;
-    color: #333;
-    margin-bottom:10px;
-    /* for default input */
-    -moz-appearance: unset;
-    -webkit-appearance: unset;
-    -o-appearance: unset;
-    -ms-appearance: unset;
-    outline: none;
-    -moz-outline: none;
-    -webkit-outline: none;
-    -o-outline: none;
-    -ms-outline: none;
-}
-
-::placeholder {
-    color: rgba(0,0,0,0.2);
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: rgba(0,0,0,0.2);
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-   color: rgba(0,0,0,0.2);
-  }
-
-.btn{
-    margin-top: 15px;
-    outline: none;
-    border: none;
-    font: 16px;
-    background: #E1C17B;
-    color: #ffffff;
-    padding: 14px 40px;
-    width: 95%;
-    cursor: pointer;
-}
-
-     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <title>Web</title>
+</style>
 </head>
 <body>
-    <div class="headerdarken"></div>
+    <nav class="navbar pt-3 pb-1">
+        <div class="container">
+            <div class="mytext">
+                <div class="line">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-telephone-outbound-fill"></i><strong>Phone: +0923162859445</strong> </a></li>
+                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-envelope"></i><strong> Mail: theproviders98@gmail.com </strong></a></li>
+                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-clock"></i><strong> Hours: Mon-Fri 8am - 8pm </strong></a></li>
+              </ul>
+
+              <div class="dropdown ms-2">
+                <button class="btn pt-0 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>English</strong> 
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+              <div class="media">
+                  <a href="#"><i class="m-2 bi bi-twitter"></i></a>
+                  <a href="#"><i class="m-2 bi bi-facebook"></i></a>
+                  <a href="#"><i class="m-2 bi bi-youtube"></i></a>
+              </div>
+              <p><strong>Join To Downloand</strong> <i class="bi bi-caret-right"></i></p>
+        </div>
+    </div>
+    </nav>
     <header>
-    <div class="container">
-        <div class="header_inner">
-            <div class="logo">
-                <a href="#">Hotel Zante</a>
-                <p class="wertilebi">.....</p>
-            </div>
-
-        <nav class="menu">
-            <ul class="menu_list">
-                <li class="menu_list_item">
-                    <a href="" class="menu_list_link">HOME</a><i class="bi downicon bi-chevron-down"></i>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT1</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT2</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT3</a>
-                        </li>
-                        
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand text-white" href="#">
+                     <strong>The Providers</strong> 
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                  <div class="collapse navbar-collapse text-white" id="navbarNav">
+                  <div class="collapse navbar-collapse text-white" id="navbarNav">
+                        <a class="nav-link text-white" aria-current="page" href="#"><strong> Home </strong></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Case Studies</a>
+                      </li>
+                       <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                      </li>
+                      <li class="nav-item ms-2">
+                        <a class="nav-link text-white"><i class="bi bi-search"></i></a>
+                      </li>
                     </ul>
-                </li>
-                <li class="menu_list_item">
-                    <a href="" class="menu_list_link">ROOMS</a><i class="bi downicon bi-chevron-down"></i>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">LARGERTEXT1111</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT2</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT3</a>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="menu_list_item">
-                    <a href="" class="menu_list_link">PAGES</a><i class="bi downicon bi-chevron-down"></i>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">LARGERTEXT11111111111111111</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT2</a>
-                        </li>
-                        <li class="dropdown_menu_item">
-                            <a class="dropdown_menu_link" href="">TEXT3</a>
-                        </li>
-                        
-                    </ul>
-                </li>
-                <li class="menu_list_item">
-                    <a href="" class="menu_list_link">BLOG</a>
-                </li>
-                <li class="menu_list_item">
-                    <a href="" class="menu_list_link">CONTACT US</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="header_button">
-            <a class="header_button_link" href="" ><i class="bi calendaricon bi-calendar-check"></i>&nbsp;&nbsp;&nbsp;BOOK ONLINE</a>
-        </div>
-    </div> 
-
-<div class="gverdigverd">
-    <div class="textbox">
-        <h1 class="maglatext">WELCOME TO ZANTE, MODERN ROOMS</h1>
-        <div class="stars">
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-            <p>Star Luxury Hotel</p>
-        </div>
-        <div class="features">
-            <div class="featureline">
-               <i class="bi bi-check2-square"></i><p>&nbsp;Modern Rooms & Spacious Suites</p> 
-            </div>
-            <div class="featureline">
-                <i class="bi bi-check2-square"></i><p>&nbsp;A Gourment Dining Experience</p> 
-             </div>
-             <div class="featureline">
-                <i class="bi bi-check2-square"></i><p>&nbsp;Family Room from $89 per night</p> 
-             </div>
-        </div>
-        <div class="featureicons">
-            <div class="featureiconsbox">
-                <div class="featureiconsboxicon"><i class="bi bi-wifi-2"></i></div>
-                <div class="featureiconsboxtext">
-                   <h1>ENJOY FREE WIFI</h1>
-                <p>IN THE WHOLE HOTEL</p> 
+                  </div>
                 </div>
-            </div>
-            <div class="featureiconsbox">
-                <div class="featureiconsboxicon"><i class="bi bi-tv"></i></div>
-                <div class="featureiconsboxtext">
-                   <h1>CABLE TELEVISION</h1>
-                <p>FREE CABLE TV</p> 
-                </div>
-            </div>
-            <div class="featureiconsbox">
-                <div class="featureiconsboxicon"><i class="bi bi-egg-fried"></i></div>
-                <div class="featureiconsboxtext">
-                   <h1>RESTAURANT</h1>
-                <p>RESTAURANT & BAR</p> 
-                </div>
-            </div>
+              </nav>
         </div>
-    </div>
+        <div class="container">
+          <div class="text text-white">
+            <h1>Websites Codes For EveryOne.</h1>
 
-
-    <div class="inputbox">
-        <div class="inputdarken">
-            <p>BOOK YOUR STAY</p>
+            <p><strong> We are Providers, and we provides all types of codes and files.</strong></p>
+            <button class="btn btn-warning p-3 ps-4 ps-4"><strong> GET IN TOUCH   <i class="bi bi-chevron-right"></i></strong></i></button>
+          </div>
         </div>
-
-        <div class="inputmain">
-            <div class="inputlabel">
-                <label>Check In/Out:</label>
-                <input type="text" name="" placeholder="Check In ➡ Check Out" required>
-            </div>
-
-            <div class="inputlabel">
-                <label>Guests:</label>
-                <input type="text" name="" placeholder="Guests 1" required>
-            </div>
-
-            <button class="btn" type="button">CHECK AVAILABILITY</button>
-        
-
-            </div>
-        </div>
-    </div>
-</div>
-    
-
-
-</div>
     </header>
-    
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+    </html>
