@@ -216,3 +216,19 @@ a{
         top: 0 !important;
     }
 }
+/* 
+html, *{
+    cursor: none !important;
+} */
+
+
+.effeect{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 888;
+    width: 150px;
+    height: 150px;
+    backdrop-filter: blur(3px);
+    border: 1px dashed #fff;
+}

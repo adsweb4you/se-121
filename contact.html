@@ -5,143 +5,422 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<style>
-  .mytex{
-    display: flex;
-    justify-content: space-around;
-}
-.line{
-    display: flex;
-}
-header{
-    background-image: url('img/slider.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-a{
-    text-decoration: none;
-    color: rgb(150, 16, 16);
-}
-.list-inline-item{
-    margin-right: 1.5rem;
-}
-.nav-light{
-    color: white;
-}
-.navbar-nav{
-    color: white;
-}
-.navbar-link{
-    color: white;
-}
-.navbar{
-    border-bottom: 2px solid white;
-    padding: 30px 0;
-}
-.text{
-    margin-top: 150px;
-    width: 85%;
-}
-@media (max-width:1400px){
-    .list-inline-itim:not(:last-child){
-        margin-right: 1rem;
-    }
-}
-@media (max-width:1200px){
-    .line{
-        flex-direction: column;
-    }
-}
-@media (max-width:1200px){
-    .navbar{
-        flex-direction: column;
-    }
-}
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+ 
+      
+      .display
+      {
+          font-size: 36px;
+          color:#5d257c;
+          font-family: 'Raleway', sans-serif;
+          padding:95px 0;
+      }
+      
+      .text1
+      {
+          background-color: rgba(93,37,124,0);
+      border: 5px solid #5d257c;
+      padding:0px 8px;
+      
+      }
+      
+      .image1
+      {
+          width:100%;
+          height:700px;
+      }
+      
+      .box1
+      {
+          background-color: #5d257c;
+          position:absolute;
+          z-index:10;
+          padding-left: 60px !important;
+      }
+      
+      .box1 p
+      {
+          
+          margin-top:60px;
+          font-size: 16px;
+          font-family: 'Raleway', sans-serif;
+          margin-bottom:80px;
+         
+      }
+      
+      
+      
+      .box1 h1
+      {
+          font-size: 30px;
+          font-family: 'Raleway', sans-serif;
+          margin-bottom:60px;
+      
+      }
+      
+      .box1 a
+      {
+          font-size: 14px;
+          font-family: 'Raleway', sans-serif;
+          margin-bottom:70px;
+          text-decoration: 0;
+          color: #fff;
+          text-align:center;
+          padding:18px 40px 16px 40px;
+          display:inline-block;
+          border: 3px solid #772f9f;
+      }
+      
+      .header
+      {
+          background-color: #5d257c;
+          position:relative;
+      }
+      
+      .graybox
+      {
+         
+          position:absolute;
+          z-index: 8;
+          left:0;
+          top:0;
+          height:700px;
+      }
+      
+      .graybox img
+      {
+          width:100%;
+          height:100%;
+      
+      }
+      
+      .row>* {
+          
+          padding-right:0;
+          padding-left:0;
+          
+      }
+      
+      .girls
+      
+      {
+          width:100%;
+          height:565px;
+      }
+      
+      .box2
+      {
+          background-color: #ffffff;
+          position: relative;
+          padding-left:30px;
+      }
+      
+      .captions
+      {
+          display:flex;
+          justify-content: space-between;
+          padding-top: 40px;
+          margin-bottom: 40px;
+      }
+      
+      .caption1
+      {
+          font-size: 18px;
+          font-family: 'Playfair Display', serif;
+          color: #5d257c;
+          font-style: italic;
+      
+      }
+      
+      
+      .caption2
+      {
+          color:#cccccc;
+          font-style: italic;
+          font-size: 18px;
+          font-family: 'Playfair Display', serif;
+          padding-right:30px;
+      
+      
+      }
+      
+      .box2 h1 
+      {
+          font-size: 30px;
+          font-family: 'Raleway', sans-serif;
+          margin-bottom: 58px;
+      }
+      
+      .box2 p
+      {
+          font-size: 16px;
+          font-family: 'Playfair Display', serif;
+          color:#cccccc;
+      
+      }
+      
+      .box2 a
+      {
+          text-decoration: 0;
+          background-color: rgba(93,37,124,0);
+      border: 3px solid #ededed;
+      padding:15px 40px;
+      font-size: 16px;
+      font-family: 'Raleway', sans-serif;
+      color: #000000;
+      margin-top: 30px;
+      margin-bottom:30px;
+      display: inline-block;
+      
+      
+      }
+      
+      .box2::after
+      {
+          content: "";
+          width: 105px;
+      height: 4px;
+      background-color: #000000;
+      position:absolute;
+      top:255px;
+      left:30px;
+      }
+      
+      .carouselheight
+      {
+          height:600px;
+      }
+      
+      .Storehouse
+      {
+          background-color: #5d257c;
+          height:300px;
+      }
+      
+      .kateimg
+      {
+          height:600px;
+          width:100%;
+      }
+      
+      .carousel-inner img
+      {
+          height:100%;
+      }
+      
+      .carousel-item 
+      
+      {
+          height:100%;
+      }
+      .carousel-inner
+      {
+          height: 100%;
+      }
+      
+      .joinus
+      {
+          background-image: url(img/newproject/joinbackground.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height:300px;
+      }
+      
+      .nikeshoes
+      {
+          background-image: url(img/newproject/nike\ shoes.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: #562273;
+          height: 600px;
+      }
+      
+      
+      .position
+      
+      {
+          bottom:0;
+          right:-20px;
+          
+      }
+      
+      @media (min-width: 1400px) {
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+          max-width: 1000px;
+      }
+      }
+      
+      </style>
+    
+  
 </head>
 <body>
-    <nav class="navbar pt-3 pb-1">
-        <div class="container">
-            <div class="mytext">
-                <div class="line">
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-telephone-outbound-fill"></i><strong>Phone: +0923162859445</strong> </a></li>
-                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-envelope"></i><strong> Mail: theproviders98@gmail.com </strong></a></li>
-                <li class="list-inline-item"><a href="tel:+092316285944"> <i class="m-2 bi bi-clock"></i><strong> Hours: Mon-Fri 8am - 8pm </strong></a></li>
-              </ul>
 
-              <div class="dropdown ms-2">
-                <button class="btn pt-0 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <strong>English</strong> 
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-              <div class="media">
-                  <a href="#"><i class="m-2 bi bi-twitter"></i></a>
-                  <a href="#"><i class="m-2 bi bi-facebook"></i></a>
-                  <a href="#"><i class="m-2 bi bi-youtube"></i></a>
-              </div>
-              <p><strong>Join To Downloand</strong> <i class="bi bi-caret-right"></i></p>
-        </div>
+    <nav class="display">
+        <div class="container">
+            <div class="row">
+        <div class=" col-4 icon1 align-middle"><i class="bi bi-list"></i></div>
+        <div class=" col-4  text-center"><span class="text1">NEMESIS</span></div>
+        <div class=" col-4 icon1 text-end"><i class="bi bi-search"></i></div>
+    </div>
     </div>
     </nav>
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand text-white" href="#">
-                     <strong>The Providers</strong> 
-                  </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                      <li class="nav-item">
-                  <div class="collapse navbar-collapse text-white" id="navbarNav">
-                  <div class="collapse navbar-collapse text-white" id="navbarNav">
-                        <a class="nav-link text-white" aria-current="page" href="#"><strong> Home </strong></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Services</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Case Studies</a>
-                      </li>
-                       <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Blog</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
-                      </li>
-                      <li class="nav-item ms-2">
-                        <a class="nav-link text-white"><i class="bi bi-search"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-        <div class="container">
-          <div class="text text-white">
-            <h1>Websites Codes For EveryOne.</h1>
+    </nav>
 
-            <p><strong> We are Providers, and we provides all types of codes and files.</strong></p>
-            <button class="btn btn-warning p-3 ps-4 ps-4"><strong> GET IN TOUCH   <i class="bi bi-chevron-right"></i></strong></i></button>
-          </div>
+    <header class="header">
+        
+
+    <div class="container">
+        <div class="row">
+            <div class="graybox col-4"><img src="img/newproject/gray_background.png" alt=""></div>
+            <div class=" col-4  align-self-center box1 text-white">
+                <p>Fashion</p>
+                <h1>Lookbook Lorem Purple Ipsum 2016</h1>
+                <a href="#">Check More</a>
+            </div>
+        <div class="col-3"></div>
+        <div class="col-9 "><img class="image1" src="img/newproject/woman.png" alt=""></div>
+    </div>
+    </div>
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-3"><img class="girls" src="img/newproject/girl1.png" alt=""></div>
+            <div class="col-3">
+                <div class="box2">
+                    <div class="captions">
+                    <div class="caption1">Lifestyle</div>
+                    <div class="caption2">2 Jan</div>
+                </div>
+                    <h1>Lorem Ipsum Welcomes New Fashion Brand</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue libero erat, eget aliquam dolor fermentum at</p>
+                   <a href="#">Check More</a>
+                </div>
+            </div>
+            <div class="col-3"><img class="girls" src="img/newproject/girl2.png" alt=""></div>
+            <div class="col-3">
+                <div class="box2">
+                    <div class="captions">
+                    <div class="caption1">Stories</div>
+                    <div class="caption2">2 Jan</div>
+                </div>
+                    <h1>Lorem Ipsum Welcomes New Fashion Brand</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue libero erat, eget aliquam dolor fermentum at</p>
+                   <a href="#">Check More</a>
+            </div>
         </div>
-    </header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
-    </html>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-3">
+                <div class="box2">
+                    <div class="captions">
+                    <div class="caption1">Fashion</div>
+                    <div class="caption2">2 Jan</div>
+                </div>
+                    <h1>Lorem Ipsum Welcomes New Fashion Brand</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue libero erat, eget aliquam dolor fermentum at</p>
+                   <a href="#">Check More</a>
+                </div>
+            </div>
+            <div class="col-3"><img class="girls" src="img/newproject/girl3.png" alt=""></div>
+           
+            <div class="col-3">
+                <div class="box2">
+                    <div class="captions">
+                    <div class="caption1">Events</div>
+                    <div class="caption2">2 Jan</div>
+                </div>
+                    <h1>Lorem Ipsum Welcomes New Fashion Brand</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue libero erat, eget aliquam dolor fermentum at</p>
+                   <a href="#">Check More</a>
+            </div>
+        </div>
+        <div class="col-3"><img class="girls" src="img/newproject/girl4.png" alt=""></div>
+    </div>
+    </div>
+
+
+
+
+</header>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div id="carouselExampleCaptions" class="carousel slide carouselheight position-relative" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/slider.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>First slide label</h5>
+                          <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/slider.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Second slide label</h5>
+                          <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/slider.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                   
+
+                    <div data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+
+                    </div>
+
+                  </div>
+              <div>The READER</div>
+              <a href="#">Watch Movie</a>
+              <div class="Kate">Kate Winslet</div>
+
+            </div>
+            <div class="col-4 ">
+                <div class="Storehouse">
+                <h1>The STOREHOUSE</h1>
+                <p>Check Our New Collection</p>
+            </div>
+            <div ><img  class="kateimg" src="img/newproject/Kate Winslet.png" alt=""></div>
+                
+            </div>
+            <div class="col-4  ">
+                <div class="joinus">
+                <p>Best Team Ever</p>
+                <h1>JOIN TO US</h1>
+            </div>
+            <div class="nikeshoes"></div>
+                
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>       
+</body>
+</html>
