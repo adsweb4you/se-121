@@ -26,13 +26,13 @@ document.getElementById("output").innerHTML = "<h1>" + myname + "</h1>";
  
 
 let year = 6;
-let month = " 6  თვის "
-let mystr = `მე ვსწავლობ it Step აკადემიაში   პროგრამირებას  ${month}  ვსწავლობ  პროგრამირებას    განმავლობაში`;
+let month = " 6 "
+let mystr = `მე ვსწავლობ it Step აკადემიაში   პროგრამირებას  ${month * 6}  ვსწავლობ  პროგრამირებას    განმავლობაში`;
 
 
  
 
-console.log( mystr.match(/\d/g));
+console.log(mystr);
 
 /* -- sting method 
 
@@ -65,3 +65,69 @@ function findText(userinput){
     mytext.innerHTML = finded;
 
 }
+
+
+let img = "img/slider.png";
+let titles = "პროდუქტის აღწერა";
+let descr = "პროდუქტის სრული აღწერა";
+let card  = `
+<div class="card">
+  <img src="${img}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${titles}</h5>
+    <p class="card-text">${descr}</p>
+    <a href="#" class="btn btn-primary">სრულად ნახვა</a>
+  </div>
+</div>
+`
+
+mycards.innerHTML = card;
+
+
+let int1 = 25;
+let int2 = "25";
+let sumint = int1 + Number(int2);
+//int1 = Math.floor(int1)
+//int1 = Math.round(int1)
+
+console.log(sumint);
+
+// ფუნქციის შექმნა
+function info(msg) {
+ document.getElementById('elem').innerHTML +=  msg + "<br>";
+}
+
+//გამოძახება
+ info('ჩემი პირველი ფუნქცია');
+
+
+function printinfo(x, y, ...params){
+ 
+
+  let zz = x * y;
+
+  console.log(params);
+
+  // call
+  info('ჩემი მეორე ფუნქცია');
+
+}
+
+printinfo(58,25, 45, 897, "asdas");
+
+
+function calc(){
+  return 0;
+}
+
+calc();
+
+console.log(calc())
+
+let arrs = (param1, param2) => {
+  return console.log(param1);
+}
+
+
+
+arrs('arrow', 'asd');

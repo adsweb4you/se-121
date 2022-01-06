@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url('https://wallpaperaccess.com/full/2752980.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+
+        img{
+            filter: hue-rotate(45deg);
+            position: absolute;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-50%);
+             width: 15%;
+             transition: all 5s;
+        }
+
+        img.move{
+            bottom:100%;
+            left: 0%;
+            transform: translateX(0%);
+        }
+
+        img.movex{
+            transform: translateX(0%) rotate(45deg);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <img src="img/comanche.png" data-src="http://gifimgs.com/animations/transportation/helicopters/comanche.gif" alt="">
+    
+    <script>
+    let heli = document.querySelector("img");
+setTimeout(()=>{
+
+
+
+    heli.src = heli.getAttribute('data-src')
+
+
+    setTimeout(()=>{
+        heli.classList.add("move");
+
+        setTimeout(()=>{
+        heli.classList.add("movex");
+    }, 500)
+
+    }, 4000)
+
+}, 3000)
+
+setInterval(() => {
+  let pos =  heli.getBoundingClientRect();
+
+  let x = pos.left;
+  let y = pos.top;
+
+ window.addEventListener('mousemove', function(e){
+     console.log(e.clientX, e.clientX)
+ })
+
+}, 100);
+
+    </script>
+</body>
+</html>
