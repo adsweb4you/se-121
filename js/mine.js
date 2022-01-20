@@ -461,9 +461,23 @@ let tim = d.toLocaleTimeString(); // გვიბრუნებს საათ
 
 console.log(d.getDay());
 
+setInterval(()=>{
+
 let startD = Date.parse(new Date());
-let endtD = Date.parse('2022-2-20');
+let endtD = Date.parse('2022-1-30');
 
-let diff = endtD - startD 
+let diff = endtD - startD; 
 
-console.log((diff / 86400000).toFixed());
+let difdey = (diff / 86400000).toFixed();
+let ho =     (diff  / 3600000 -  (difdey * 24)).toFixed();  
+let mins =   (diff  / 60000  -  (difdey * 24 * 60 ) - ho * 60).toFixed(); 
+
+let secs =   (diff  / 1000   -  (9 * 24 * 60 * 60) - (2 * 60 * 60 ) - ( 5 * 60)); 
+
+document.getElementById('day').innerHTML = difdey + "დღე:";
+document.getElementById('hour').innerHTML = ho + "საათი:";
+document.getElementById('min').innerHTML = mins + "წუთი:";
+document.getElementById('sec').innerHTML = secs + "წამი";
+
+}, 1000)
+
