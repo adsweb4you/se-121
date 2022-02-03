@@ -73,3 +73,73 @@ body{
 button{
     cursor: pointer;
 }
+
+.openmenu{
+    position: absolute;
+    background-color: #4118f5;
+    padding: 17px;
+    color: #fff;
+    border: 0;
+    font-size: 25px;
+    border-radius: 7px;
+    box-shadow: 7px 7px 7px #4118f561;
+    left: 50px;
+    transition: all .6s;
+    top: 50px;
+    z-index: 9;
+}
+
+.sidebar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    width: 350px;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all .6s;
+    background-color: #4118f5;
+}
+
+.sidebar.show{
+    transform: translateX(0);
+}
+
+.openmenu.show{
+    left: 400px
+}
+
+.sidebar a{
+    text-align: center;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.prdouctts{
+  
+    width: 800px;
+    margin: auto;
+    padding: 7px;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+
+}
+
+.detals span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer
+    ;
+}
+
+.detals span.active{
+    border: 3px solid blueviolet;
+}

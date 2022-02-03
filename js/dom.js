@@ -100,3 +100,28 @@ form.addEventListener('submit', function(e){
   
 
 })
+
+
+let openside = document.querySelector('.openmenu');
+let bar = document.querySelector('.sidebar');
+openside.addEventListener('click', function(){
+    bar.classList.toggle('show')
+    this.classList.toggle('show')
+})
+ let activecolor = document.querySelector('.color span.active');
+ let colortype = document.querySelector('.type');
+let poster = document.querySelector('.imgblock img');
+ let colorswitch = document.querySelectorAll('.color span');
+
+
+ colorswitch.forEach(el=>{
+    el.addEventListener('click', function(){
+        let activecolor = document.querySelector('.color span.active');
+        activecolor.classList.remove('active');
+        this.classList.add('active');
+        colortype.innerText = this.getAttribute('data-colorname');
+        poster.src =  this.getAttribute('data-img');
+    })
+ })
+
+ colortype.innerText = activecolor.getAttribute('data-colorname');
