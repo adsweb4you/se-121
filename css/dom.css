@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.counter{
+    width: fit-content;
+    margin: auto;
+    padding: 12px 28px;
+    background: #d4d4d4;
+    border-radius: 7px;
+    display: flex;
+   
+    justify-content: space-between;
+}
+
+.counter.mycolor{
+    background-color: greenyellow;
+}
+
+.counter.nytog{
+    background-color: red;
+}
+
+.counter span{
+    font-size: 18px;
+    display: block;
+    padding: 13px;
+    cursor: pointer;
+
+}
+
+.counter span:nth-child(1){
+    background-color: green;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.counter span:nth-child(3){
+    background-color: rgb(65, 24, 245);
+    color: #fff;
+    border-radius: 2px;
+}
+
+.reset{
+    width: 100%;
+    margin-top: 7px;
+}
+
+.tests{
+    display: block;
+    margin: auto;
+    width: 450px;
+    padding: 25px;
+    border: 1px solid #cccc;
+    border-radius: 7px;
+     
+}
+.tests *{
+    width: 100%;
+    padding: 7px;
+    
+    border: 1px solid #cccc;
+    outline: 0;
+    border-radius: 7px;
+    margin-bottom: 30px;
+ display: block;
+}
+
+button{
+    cursor: pointer;
+}

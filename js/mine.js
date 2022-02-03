@@ -481,3 +481,157 @@ document.getElementById('sec').innerHTML = secs + "წამი";
 
 }, 1000)
 
+
+let Blogs = [
+  
+{
+title:"2021 წლის 10 საუკეთესო ფილმი — On.ge-ის მკითხველის არჩევანი",
+descr:"როგორც წესი, ყოველი წლის დასრულების შემდეგ კინოკრიტიკოსები თუ უბრალოდ კინომოყვარულები",
+poster:"https://phoebe.on.ge/2022/01/20/BeFunky-collage_61e988695f121.jpg",
+created_at:new Date('2022/1/22'),
+cat:"filmebi",
+active:true,
+view:2500
+},
+
+{
+  title:"2021 წლის 10 საუკეთესო ფილმი — On.ge-ის მკითხველის არჩევანი",
+  descr:"როგორც წესი, ყოველი წლის დასრულების შემდეგ კინოკრიტიკოსები თუ უბრალოდ კინომოყვარულები",
+  poster:"https://phoebe.on.ge/2022/01/20/BeFunky-collage_61e988695f121.jpg",
+  created_at:new Date('2022/1/10'),
+  cat:"multfilmebi",
+  active:true,
+  view:1200
+  },
+
+  {
+    title:"2021 წლის 10 საუკეთესო ფილმი — On.ge-ის მკითხველის არჩევანი",
+    descr:"როგორც წესი, ყოველი წლის დასრულების შემდეგ კინოკრიტიკოსები თუ უბრალოდ კინომოყვარულები",
+    poster:"https://phoebe.on.ge/2022/01/20/BeFunky-collage_61e988695f121.jpg",
+    created_at:new Date('2021/1/20'),
+    cat:"serialebi",
+    active:false,
+    view:10
+    },
+
+    {
+      title:"2021 წლის 10 საუკეთესო ფილმი — On.ge-ის მკითხველის არჩევანი",
+      descr:"როგორც წესი, ყოველი წლის დასრულების შემდეგ კინოკრიტიკოსები თუ უბრალოდ კინომოყვარულები",
+      poster:"https://phoebe.on.ge/2022/01/20/BeFunky-collage_61e988695f121.jpg",
+      created_at:new Date('2022/1/1'),
+      cat:"wignebi",
+      active:false,
+      view:500
+      },
+
+      {
+        title:"2021 წლის 10 საუკეთესო ფილმი — On.ge-ის მკითხველის არჩევანი",
+        descr:`როგორც წესი, ყოველი წლის დასრულების შემდეგ კინოკრიტიკოსები თუ უბრალოდ კინომოყვარულები საუკეთესო ფილმების სიას ადგენენ და ასე გასულ წელს აჯამებენ ხოლმე.
+2019 და 2020 წლებში ჩვენს პლატფორმაზეც გამოქვეყნდა მსგავსი ჩამონათვალი, მაგრამ ამჯერად გადავწყვიტეთ, რომ 2021 წლის საუკეთესო კინოსურათების გამოსავლენად არჩევანი მკითხველებისთვის მიგვენდო.
+გამოკითხვაში, რომელიც ჩვენს ვებგვერდზე მიმდინარეობდა, ნებისმიერ მსურველს შეეძლო, თავისი ერთი ფავორიტი ფილმი მოენიშნა: სულ წარმოდგენილი იყო 24 ფილმი, რომლებიც ქართული აუდიტორიისთვის გასულ წელს მეტ-ნაკლებად ყველაზე აქტუალური იყო და მათი უმეტესობის ხილვა კინოთეატრებში იყო შესაძლებელი`,
+        poster:"https://phoebe.on.ge/2022/01/20/BeFunky-collage_61e988695f121.jpg",
+        created_at:new Date('2022/1/5'),
+        cat:"sporti",
+        active:true,
+        view:660
+        },
+
+]
+
+function strlimit(Str, limit) {
+  let stripedstr = Str.slice(0, limit);
+  return stripedstr + "...";
+} 
+
+ 
+
+Blogs.forEach(blog=>{
+
+  let curd = new Date();
+  let blogd = blog.created_at;
+  let today;
+  let road;
+  let textColor;
+  if (curd.toLocaleDateString() == blogd.toLocaleDateString()) {
+    today = "დამატებულია დღეს";
+  }else{
+    today = blogd.toLocaleDateString();
+  }
+
+  if (blog.descr.length > 50 && blog.active && blog.view < 1000) {
+    road = "აუცილებლად წასაკითხი"
+    textColor = "bg-success"
+  }else{
+    road = '';
+    textColor = "bg-warning d-none"
+  }
+
+  let  mycards = `<div class="col-lg-4">
+   <div class="card">
+  <img src="${blog.poster}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${blog.title}</h5>
+    <p class="card-text">${strlimit(blog.descr, 40)}</p>
+    <p class="btn btn-primary">${today}</p>
+    <p class="btn ${textColor}">${road}</p>
+  </div>
+  </div>
+</div>`
+
+document.getElementById('load').innerHTML += mycards;
+
+})
+
+// function ss(x, y){
+//   return x * y;
+// }
+
+// console.log(ss(5, 5))
+// console.log(ss(5, 8))
+// console.log(ss(4, 3))
+
+let smallfun = (param, param2, ...rests) =>{
+  return rests
+ 
+}
+
+console.log(smallfun("asdasd",654, 87,54,687))
+
+let Obj = {
+  name:"asd",
+  all:function(){
+    return this.name;
+  },
+
+  arrall:(vval = "string") =>{
+    return vval;
+  }
+}
+
+console.log(Obj.arrall("ახალი მნიშვნელობა"));
+
+function rec(){
+  console.log("test");
+
+ return function recs(){
+    console.log("test 2")
+  }
+
+}
+
+rec();
+
+
+// let $ = selector =>{
+//   return document.querySelector(selector);
+// }
+
+function $(selector){
+  return document.querySelector(selector)
+}
+
+ 
+
+$("#app").innerHTML = "მარტივი სელექტორი"
+$("#app2").innerHTML = "მარტივი სელექტორი 2"
+$("#app3").innerHTML = "მარტივი სელექტორი 3"
